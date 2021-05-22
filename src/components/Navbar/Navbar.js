@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaTimes, FaBars } from 'react-icons/fa';
+import { FaTimes, FaAlignRight } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import {
   Nav,
@@ -23,7 +23,7 @@ const Navbar = () => {
               JAIME
             </NavLogo>
             <MoblieIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
+              {click ? <FaTimes /> : <FaAlignRight />}
             </MoblieIcon>
           </NavbarContainer>
         </Nav>
