@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { FaTimes, FaAlignRight } from 'react-icons/fa';
+import { FaTimes, FaBars } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 import {
   Nav,
   NavbarContainer,
@@ -14,17 +15,19 @@ const Navbar = () => {
 
   return (
     <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo to="/">
-            <NavIcon />
-            JAIME
-          </NavLogo>
-          <MoblieIcon onClick={handleClick}>
-            {click ? <FaTimes /> : <FaAlignRight />}
-          </MoblieIcon>
-        </NavbarContainer>
-      </Nav>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <Nav>
+          <NavbarContainer>
+            <NavLogo to="/">
+              <NavIcon />
+              JAIME
+            </NavLogo>
+            <MoblieIcon onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </MoblieIcon>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
     </>
   );
 };
