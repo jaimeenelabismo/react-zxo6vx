@@ -40,7 +40,7 @@ const Navbar = () => {
           <NavbarContainer>
             <NavLogo to="/">
               <NavIcon />
-              JAIME
+              JAIME RAMIREZ
             </NavLogo>
             <MoblieIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaAlignRight />}
@@ -49,27 +49,32 @@ const Navbar = () => {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to='/'>
-                  home
+                  $ Inicio
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/services'>
-                  hola
+                <NavLinks to='/Acerca'>
+                  $ Acerca de Jaime
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/products'>
-                  adios
+                <NavLinks to='/Habilidades'>
+                  $ Skills
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/Portafolio'>
+                  $ Portafolio
                 </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
-                  <NavBtnLink to="/sign-up">
-                    <Button primary >Entrar</Button>
+                  <NavBtnLink download="CV Jaime Ivan Ramirez Osorio" href="https://3pistolasdigital.mx/pdf/data_3_pistolas.pdf" rel="noopener noreferrer" target="_blank" arial-label="Curriculum">
+                    <Button primary download="CV Jaime Ivan Ramirez Osorio" href="https://3pistolasdigital.mx/pdf/data_3_pistolas.pdf" rel="noopener noreferrer" target="_blank" arial-label="Curriculum">Descargar CV</Button>
 
                   </NavBtnLink>
-                ) :( <NavBtnLink to="/sign-up">
-                <Button fontBig primary>Entrar</Button>
+                ) :( <NavBtnLink download="CV Jaime Ivan Ramirez Osorio" href="https://3pistolasdigital.mx/pdf/data_3_pistolas.pdf" rel="noopener noreferrer" target="_blank" arial-label="Curriculum">
+                <Button download="CV Jaime Ivan Ramirez Osorio" href="https://3pistolasdigital.mx/pdf/data_3_pistolas.pdf" rel="noopener noreferrer" target="_blank" arial-label="Curriculum" fontBig primary>Descargar CV</Button>
 
               </NavBtnLink>)}
               </NavItemBtn>

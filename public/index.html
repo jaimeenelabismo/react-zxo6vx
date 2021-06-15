@@ -1,12 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Jaime Ramirez, especialista en el desarrollo Front-end y una buena habilidad para la solucion de problemas" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jaime Ivan Ramirez Osorio</title>
+	<link rel="apple-touch-icon" href="assets/imagenes/Rebel_Alliance_logo.png" />
+    <link type="image/x-icon" href="assets/imagenes/Rebel_Alliance_logo.png" rel="icon" />
+    <link type="image/x-icon" href="assets/imagenes/Rebel_Alliance_logo.png" rel="shortcut icon" />
 </head>
 <body>
+    <style>
+        * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.no-scroll-y {
+	overflow-y: hidden;
+}
+
+/* Preloader */
+.ctn-preloader {
+	align-items: center;
+  cursor: none;
+	display: flex;
+  height: 100%;
+  justify-content: center;
+	position: fixed;
+	left: 0;
+  top: 0;
+	width: 100%;
+  z-index: 900;
+}
+
+.ctn-preloader .animation-preloader {
+	position: absolute;
+  z-index: 100;
+}
+
+/* Spinner cargando */
+.ctn-preloader .animation-preloader .spinner {
+  animation: spinner 1s infinite linear;
+	border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #e8175d;; /* No se identa por orden alfabetico para que no lo sobre-escriba */
+  height: 9em;
+  margin: 0 auto 3.5em auto;
+  width: 9em;
+}
+
+/* Texto cargando */
+.ctn-preloader .animation-preloader .txt-loading {
+  font: bold 5em 'Dosis', sans-serif;
+	text-align: center;
+	user-select: none;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+  animation: letters-loading 4s infinite;
+  color: #e8175d;
+  content: attr(data-text-preloader);
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: rotateY(-90deg);
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+	color: rgba(232, 23, 93, 0.2);
+	position: relative;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+  animation-delay: 0.2s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+  animation-delay: 0.4s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+  animation-delay: 0.6s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+  animation-delay: 0.8s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+  animation-delay: 1s;
+}
+
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+  animation-delay: 1.2s;
+}
+
+.ctn-preloader .loader-section {
+  background-color:#111111;
+  height: 100vh;
+	position: fixed;
+  top: 0;
+  width: calc(100% + 1px);
+}
+
+.ctn-preloader .loader-section.section-left {
+  left: 0;
+}
+
+.ctn-preloader .loader-section.section-right {
+  right: 0;
+}
+
+/* Efecto de fade en la animaciÃ³n de cargando */
+.loaded .animation-preloader {
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+/* Efecto de cortina */
+.loaded .loader-section.section-left {
+  transform: translateX(-101%);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+
+.loaded .loader-section.section-right {
+  transform: translateX(101%);
+  transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+
+/* AnimaciÃ³n del preloader */
+@keyframes spinner {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+/* AnimaciÃ³n de las letras cargando del preloader */
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+  	opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+/* TamaÃ±o de portatil hacia atras (portatil, tablet, celular) */
+@media screen and (max-width: 767px) {
+	/* Preloader */
+	/* Spinner cargando */	
+	.ctn-preloader .animation-preloader .spinner {
+		height: 8em;
+		width: 8em;
+	}
+
+	/* Texto cargando */
+	.ctn-preloader .animation-preloader .txt-loading {
+	  font: bold 3.5em 'Dosis', sans-serif;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/* Prelaoder */
+	/* Spinner cargando */
+	.ctn-preloader .animation-preloader .spinner {
+		height: 7em;
+		width: 7em;
+	}
+
+	/* Texto cargando */
+	.ctn-preloader .animation-preloader .txt-loading {
+	  font: bold 2em 'Dosis', sans-serif;
+	}
+}
+    </style>
+	<section>
+		<div id="preloader">
+			<div id="ctn-preloader" class="ctn-preloader">
+				<div class="animation-preloader">
+					<div class="spinner"></div>
+					<div class="txt-loading">
+						<span data-text-preloader="J" class="letters-loading">
+							J
+						</span>
+						
+						<span data-text-preloader="A" class="letters-loading">
+							A
+						</span>
+						
+						<span data-text-preloader="I" class="letters-loading">
+							I
+						</span>
+						
+						<span data-text-preloader="M" class="letters-loading">
+							M
+						</span>
+						
+						<span data-text-preloader="E" class="letters-loading">
+							E
+						</span>
+						<br>
+						<span data-text-preloader="F" class="letters-loading">
+							F
+						</span>
+						
+							<span data-text-preloader="R" class="letters-loading">
+							R
+						</span>
+						
+						<span data-text-preloader="O" class="letters-loading">
+							O
+						</span>
+						
+						<span data-text-preloader="N" class="letters-loading">
+							N
+						</span>
+						
+						<span data-text-preloader="T" class="letters-loading">
+							T
+						</span>
+						
+						<span data-text-preloader="-" class="letters-loading">
+							-
+						</span>
+						
+						<span data-text-preloader="E" class="letters-loading">
+							E
+						</span>
+							<span data-text-preloader="N" class="letters-loading">
+							N
+						</span>
+                        <span data-text-preloader="D" class="letters-loading">
+							D
+						</span>
+						
+						
+					</div>
+				</div>	
+				<div class="loader-section section-left"></div>
+				<div class="loader-section section-right"></div>
+			</div>
+		</div>
+	</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+  
+  setTimeout(function() {
+    $('#ctn-preloader').addClass('loaded');
+    // Una vez haya terminado el preloader aparezca el scroll
+    $('body').removeClass('no-scroll-y');
+
+    if ($('#ctn-preloader').hasClass('loaded')) {
+      // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
+      $('#preloader').delay(1000).queue(function() {
+        $(this).remove();
+      });
+    }
+  }, 3000);
+  
+});
+</script>
     <div id="root"></div>
 </body>
 </html>

@@ -2,11 +2,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 *{
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
-}
+    font-family: 'Dosis', sans-serif;}
 `;
 
 export const Container = styled.div`
@@ -26,7 +26,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
 border-radius:4px;
-background: ${({primary}) => (primary ? '#4B59F7' : '#0467FB')};
+background: ${({primary}) => (primary ? '#E8175D' : '#E8175D')};
 white-space: nowrap;
 padding: ${({big}) => (big ? '12px 64px' : '10px 20px')};
 color: #fff;
@@ -38,7 +38,7 @@ cursor: pointer;
 &:hover{
      transition: 0.3s ease-out;
      background: #fff;
-     background: ${({primary}) => (primary ? '#4B59F7' : '#0467FB')};
+     background: ${({primary}) => (primary ? '#E8175D' : '#E8175D')};
 
    }
    @media screen and (max-width: 960px) {
